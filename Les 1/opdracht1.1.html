@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulier</title>
+</head>
+<body>
+	<main>
+		<article>
+		<h1>Aanmelden</h1>
+			<p>
+				Bent u geïnteresseerd in samenwerken met CMD Amsterdam? Dat kan!! Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook lopen de studenten stage, in het tweede en afstudeerjaar.
+			</p>
+			<p>
+				CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.
+			</p>
+			<p>
+				Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u contact <a href="" title="">contact</a> met ons op.
+			</p>
+		</article>
+		<form>
+			<fieldset>
+				<p>Contactgegevens:</p>
+				<label for="naam">Naam</label>
+				<input type="text" id="naam">
+
+				<label for="bedrijf">Bedrijf</label>
+				<input type="text" id="bedrijf">
+
+				<label for="adres">Adres</label>
+				<input type="text" id="adres">
+
+				<label for="postcode">Postcode</label>
+				<input type="number" id="postcode">
+
+				<label for="plaats">Plaats</label>
+				<input type="text" id="plaats">
+
+				<label for="telefoon">Telefoon</label>
+				<input type="tel" id="telefoon">
+
+				<label for="email">E-mail</label>
+				<input type="email" id="email">
+				
+				<p>Ik wil mij aanmelden:</p>
+				<input type="radio">Voor een project
+				<input type="radio">Als stagebedrijf
+
+				<input type="submit">
+			</fieldset>
+		</form>
+
+		<h2>Project</h2>
+		<form>
+			<fieldset>
+				<label for="Titel">Titel</label>
+				<input type="text" id="Titel">
+
+				<label for="Opdrachtomschrijving">Opdrachtomschrijving</label>
+				<textarea id="Opdrachtomschrijving"></textarea>
+
+				<label for="Doelgroepomschrijving">Doelgroepomschrijving</label>
+				<textarea id="Doelgroepomschrijving"></textarea>
+
+				<label for="Doelstelling/intentie_van_het_project">Doelstelling/intentie van het project</label>
+				<input type="text" id="Doelstelling/intentie_van_het_project">
+
+				<label for="Looptijd">Looptijd</label>
+				<input type="number" id="Looptijd" min="4" max="6">
+
+				<label for="Deadline">Deadline</label>
+				<input type="date" name="deadline" id="Deadline">
+
+				<label>Geschikt voor:</label>
+				<input type="checkbox" name="Geschikt_voor:" value="Eerstejaars_studenten"> Eerstejaars studenten
+				<input type="checkbox" name="Geschikt_voor:" value="Tweedejaars_studenten"> Tweedejaars studenten
+				<input type="checkbox" name="Geschikt_voor:" value="Derdejaars_studenten"> Derdejaars studenten
+				<input type="checkbox" name="Geschikt_voor:" value="Afstudeer_studenten"> Afstudeer studenten
+				<input type="checkbox" name="Geschikt_voor:" value="Onbekend"> Onbekend
+			</fieldset>
+		</form>
+
+		<h2>Stage</h2>
+		<form>
+			<fieldset>
+				<label>Geschikt voor:</label>
+				<input type="checkbox" name="Geschikt_voor:" value="Tweedejaars_studenten"> Tweedejaars studenten
+				<input type="checkbox" name="Geschikt_voor:" value="Afstudeer_studenten"> Afstudeer studenten
+				<input type="checkbox" name="Geschikt_voor:" value="Onbekend"> Onbekend
+
+				<label>Hoelang is de stage?</label>
+				<input type="radio">10 weken
+				<input type="radio">20 weken
+
+				<label>Begin datum</label>
+				<input type="date" name="Begin_datum">
+
+				<label for="Beschrijving_werkzaamheden:">Beschrijving werkzaamheden:</label>
+				<textarea id="Beschrijving_werkzaamheden:"></textarea>
+			</fieldset>
+		</form>
+
+	</main>
+</body>
+</html>
