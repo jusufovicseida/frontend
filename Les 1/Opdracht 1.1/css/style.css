@@ -1,59 +1,137 @@
+*{
+	box-sizing: border-box;
+}
 body{
-	background-color: #fff;
+	background: #fff;
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
 h1{
 	position: fixed;
-	width: 100%;
-	margin-top: 0;
-	background-color: #ffcc00;
-	color: #fff;
-	text-shadow: 1px 1px 2px #666;
-	margin: 0;
-	padding: 1em 1.5em;
-	font-weight: 300;
+	width: 90%;
+	background: #ffcc00;
 	font-size: 1.5em;
-	-webkit-box-shadow: 0px 3px 4px 2px #f5f5f5; /* Safari, IOS en Android*/
-	-moz-box-shadow: 	0px 3px 4px 2px #f5f5f5; /* Mozilla Firefox */
-	box-shadow: 		0px 3px 4px 2px #f5f5f5;
-	z-index: 1;
+	padding: 1em 2em;
+	margin-top: 0;
+	color: #fff;
+	font-weight: 300;
+	-webkit-box-shadow: 0px 3px 4px 2px #f5f5f5;  /* Safari, iOS, Android */
+  	-moz-box-shadow:    0px 3px 4px 2px #f5f5f5;  /* Firefox */
+  	box-shadow:         0px 3px 4px 2px #f5f5f5;
+  	text-shadow: 1px 1px 2px #666;
+  	z-index: 1;
+  	border-radius: 0 0 5px 5px;
 }
 p{
+	color: #6A7172;
 	font-weight: 300;
 	line-height: 1.7em;
 }
 a{
 	text-decoration: none;
-	color: #eac11d;
+	color: #ffcc00;
 	transition: all 0.5s ease;
 }
 a:visited{
-	color: #eac11d;
+	color: #ffcc00;
 }
 a:hover{
 	color: #000;
 }
+
 div{
 	float: left;
 	width: 50%;
 	margin: 8em 5% 0 4%;
 }
+section.left{
+	position: relative;
+	width: 45%;
+}
+section.right{
+	position: relative;
+	width: 40%;
+}
+section.wrapper{
+	width: 90%;
+	margin: 0 auto;
+}
+section.left{
+	float: left;
+}
+section.right{
+	float: right;
+}
 article{
 	position: fixed;
-	width: 50%;
-	z-index: 0;
+    width: 45%;
+    margin-top: 8em;
+    z-index: 0;
+    padding-left: 3em;
 }
 form{
-	float: left;
-	width: 30%;
-	margin: 8em 5% 2em 0;
+	margin-top: 8em;
 	font-weight: 300;
 	z-index: 0;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+}
+fieldset{
+	position: relative;
+	border: 0;
+}
+legend{
+	position: absolute;
+	padding-top: 0.5em;
+	font-weight: 700;
+	margin: 0 0 2em;
+	text-shadow: 0px 0px 1px #ffcc00; 
+}
+legend + ol{
+	margin-top: 2em;
+	padding-top: 0.5em;
+	display: inline;
+	list-style: none;
+}
+ol li{
+	padding: .5em 0;
+}
+ol > li:first-child{
+	margin-top: 1em;
 }
 label{
-	width: 100%
+	position: relative;
+	left: .2em;
+	margin-bottom: .3em;
+	display: block;
 }
 input{
-	width: 100%
+	width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
 }
+input[type=radio] + label, input[type=checkbox] + label{
+	display: inline;
+}
+input[type="radio"], input[type=checkbox]{
+	vertical-align: baseline;
+	width: 5%;
+    display: inline;
+}
+input[type="submit"]{
+	transform: rotate(5deg);
+	width: 100%;
+	background: #ffcc00;
+}
+textarea{
+	width: 93%;
+	max-width: 100%;
+	padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+}
+input:focus, textarea:focus{
+	transition: all 0.5s ease;
+}
+
