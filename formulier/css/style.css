@@ -1,0 +1,177 @@
+body{
+	margin: 0;
+
+	
+}
+a{
+	text-decoration: none;
+	color: #fac666;
+}
+/* sibling combinators zorgt ervoor dat alleen directe header-child van de body deze regels wordt toegewezen. */
+body > header{
+	width: 60%;
+	margin: 0 auto;
+}
+header nav ul{
+	list-style: none;
+	padding-left: 0;
+}
+header nav ul li{
+	display: inline;
+}
+header nav ul li a{
+	padding: 1em 1.1em;
+}
+main{
+	width: 60%;
+	margin: 0 auto;
+}
+h1{
+	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+img{
+	width: 100%;
+}
+img:hover{
+	/* Transitie waabrbij afbeelding bij hover wordt ingezoomed.*/
+	-webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+section.related{
+	width: 60%;
+	margin: 4em auto 0;
+}
+section.related article{
+	margin-bottom: 5em;
+}
+aside{
+	width: 60%;
+	margin: 0 auto;
+}
+
+
+
+/* FORMULIER */
+form{
+	margin-top: 3em;
+}
+fieldset{
+	border: 0;
+	margin-left: 0;
+    padding-left: 0;
+}
+fieldset label{
+	display: block;
+}
+legend{
+	font-size: 1.5em;
+}
+fieldset input{
+	font-size: 1em;
+	border-radius: 5px;
+	border: 1px solid #ededed;
+}
+label span{
+	display: inline-block;
+	margin-bottom: .5em;
+}
+input[type="text"], input[type="tel"],input[type="email"],input[type="date"]{
+	min-width: 100%;
+	height: 1em;
+	display: block;
+	margin: 0 0 1.5em 0;
+	padding: 1em;
+}
+input[type="submit"]{
+	-webkit-box-shadow: 10px 10px 10px -4px rgba(199,199,199,1);
+	-moz-box-shadow: 10px 10px 10px -4px rgba(199,199,199,1);
+	box-shadow: 10px 10px 10px -4px rgba(199,199,199,1);
+	font-size: 1em;
+	transform: skewX(25deg);
+	background: #fac666;;
+	border: 0;
+}
+textarea{
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border-radius: 5px;
+	border: 1px solid #ededed;
+}
+body > footer{
+	width: 60%;
+	margin: 0 auto;
+}
+p#feedback{
+	text-align: center;
+}
+
+/* For mobile : like samsung grand(480 * 800): */
+@media screen and (max-width : 480px){
+	body > header {
+	    width: 80%;
+	    margin: 0 auto;
+	}
+	header nav ul li{
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: .5em;
+	}
+	header nav ul li a{
+		display: inline-block;
+	    padding: 1em 0;
+	    width: 100%;
+	    color: #fff;
+	    background: #fac666;
+	}
+	main{
+		width: 80%;
+	}
+	section.related {
+	    width: 80%;
+	    margin: 4em auto 0;
+	}
+	aside{
+		width: 80%;
+	}
+	body > footer{
+		width: 80%;
+	}
+	input[type="text"], input[type="tel"], input[type="email"], input[type="date"], textarea {
+    	min-width: 93%;
+	}
+}
+
+/* For ipad: */
+@media screen and (max-width : 768px){
+	header nav ul li{
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: .5em;
+	}
+	header nav ul li a{
+		display: inline-block;
+	    padding: 1em 0;
+	    width: 100%;
+	    color: #fff;
+	    background: #fac666;
+	}
+	main{
+		width: 80%;
+	}
+	section.related {
+	    width: 80%;
+	    margin: 4em auto 0;
+	}
+	aside{
+		width: 80%;
+	}
+	body > footer{
+		width: 80%;
+	}
+	input[type="text"], input[type="tel"], input[type="email"], input[type="date"]{
+    	min-width: 100%;
+} 
