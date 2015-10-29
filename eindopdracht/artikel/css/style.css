@@ -1,0 +1,548 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	/* Dit zorgt ervoor dat de padding geen extra breedte meegeeft aan element */
+}
+body{
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #F3F1EF;
+}
+a{
+	text-decoration: none;
+	color: #fac666;
+
+	/* transition */
+	transition: all 0.5s ease;
+}
+body > header form{
+	display: none;
+}
+a:hover{
+	/* pseudo class*/
+	color: #000;
+}
+p{
+	font-weight: 300;
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
+body > header{
+	/* Direct child van de body */
+	background: #ffcc00;
+	width: 100%;
+	padding-top: 1em;
+	margin: 3em 0 0;
+	padding: 2em 0;
+	clear: both;
+}
+body > header h1, body > header p{
+	margin-top: 0;
+	text-align: center;
+}
+header nav ul{
+	list-style: none;
+	padding-left: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+header nav ul li a{
+	padding: 1em 1.5em;
+	color: #fff;
+	display: inline-block;
+}
+header nav ul li a:hover{
+	color: #333;
+}
+
+header nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #000;
+	-webkit-box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.28);
+	-moz-box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.28);
+	box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.28);
+	z-index: 1;
+}
+
+nav{
+/*	display: flex;
+	justify-content: flex-start;*/
+	display: flex;
+  	align-items: center;
+}
+
+nav ul{
+	margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+.activePage{font-weight: 700;}
+header form{
+	position: relative;
+    top: -5em;
+    width: 40%;
+    float: right;
+}
+p.to-profile{
+	/*position: fixed;
+    top: .4em;
+    right: 2em;
+    z-index: 2;*/
+    flex: 3;
+    margin: 0;
+    padding-right: 1.5em;
+    text-align: right;
+}
+figure{
+	text-align: center;
+}
+figure img{
+	width: 50%;
+	-ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+main{
+	width: 60%;
+	max-width: 60%;
+	margin: 0 auto;
+}
+main img{
+	width: 100%;
+}
+main article h1{
+	text-align: center;
+	font-size: 4em;
+	font-weight: 300;
+	text-shadow: 3px 3px 0px rgba(150, 150, 150, 0.34);
+}
+main article footer{
+	width: auto;
+}
+main footer{
+	background: #333;
+	color: #f5f5f5;
+
+	/* BOXSHADOW */
+	-webkit-box-shadow: 13px 10px 0px -3px rgba(0,0,0,0.11);
+	-moz-box-shadow: 13px 10px 0px -3px rgba(0,0,0,0.11);
+	box-shadow: 13px 10px 0px -3px rgba(0,0,0,0.11);
+	padding: 1em;
+    margin-left: 5%;
+    margin-bottom: 2em;
+    font-size: .8em;
+}
+main footer h4, main footer p{
+	margin: 0;
+}
+
+ol{
+	list-style: none;
+	padding-left: 0;
+}
+ol li{
+	display: inline-block;
+	line-height: 10em;
+	font-size: .7em;
+}
+ol li a{
+	background: #000;
+	border-radius: 50%;
+	width: 10em;
+	height: 10em;
+	display: inline-block;
+	text-align: center;
+}
+
+#sitemap ul {
+	list-style: none;
+}
+#sitemap > ul{
+	padding-left: 0;
+}
+#sitemap > ul > li > a{
+	font-weight: 700;
+}
+#sitemap > ul > li{
+	margin-bottom: 2em;
+}
+#credits h2{
+	font-size: 1em;
+	margin-bottom: 0;
+}
+#credits p{
+	font-size: .9em;
+	margin-top: 0;
+}
+
+section.related{
+	width: 60%;
+	margin: 0 auto;
+}
+section.related h3{
+	font-size: 2em;
+}
+section.related article header p:nth-of-type(1){
+	font-size: .8em;
+	color: #676767;
+}
+section.related article header p:nth-of-type(3) {
+    font-size: .8em;
+    color: #676767;
+}
+section.related article{
+	width: 40%;
+	float: left;
+	border-bottom: 1px solid #dadada;
+	margin-bottom: 2em;
+}
+section.related article:nth-of-type(2),
+section.related article:nth-of-type(4)
+{
+	margin-left: 20%;
+}
+
+section.related section article + article{
+	/* binnen de section neemt hij alle articles die direct na een section komt zonder dat er iets tussen staat*/
+	color: #333;
+}
+section.related header h3, section.related header p{
+	margin: 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+aside{
+	width: 60%;
+	margin: 3em auto 0;
+
+	/* FLEXBOX */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: space-between;
+}
+
+aside section{
+	width: 45%;
+}
+a[rel="bookmark"]{
+	display: block;
+}
+aside section article{
+	background: #fff;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+body > footer{
+	background: #2A2C44;
+	width: 100%;
+	clear: both;
+	color: #f5f5f5;
+	padding: 2em 0;
+}
+body > footer section{
+	width: 60%;
+	margin: 0 auto;
+}
+footer #sitemap > ul > li{
+	vertical-align: top;
+}
+footer #sitemap > ul > li{
+	display: inline-block;
+	margin-right: 1.6em;
+}
+footer #sitemap > ul > li > ul{
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#about h2, #about p{
+	font-size: .9em;
+}
+#contact h2, #contact p {
+	margin: 0;
+	font-size: .9em;
+}
+#credits{
+	clear: both;
+}
+p#feedback{
+	text-align: center;
+	text-shadow: 6px 6px 17px rgba(150, 150, 150, 1);
+}
+
+/* FORMULIER */
+form{
+	margin-top: 3em;
+}
+fieldset{
+	border: 0;
+	margin-left: 0;
+    padding-left: 0;
+}
+fieldset label{
+	display: block;
+}
+legend{
+	font-size: 1.5em;
+}
+fieldset input{
+	font-size: 1em;
+	border-radius: .5em;
+	border: 1px solid #ededed;
+}
+label span{
+	display: inline-block;
+	margin-bottom: .5em;
+}
+input[type="text"], input[type="tel"],input[type="email"],input[type="date"]{
+	min-width: 100%;
+	height: 1em;
+	display: block;
+	margin: 0 0 1.5em 0;
+	padding: 1em;
+}
+input[type="submit"]{
+	font-size: 1em;
+	background: #fac666;;
+	border: 0;
+	border-radius: 2em;
+    padding: .5em 1em;
+}
+textarea{
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border-radius: .5em;
+	border: 1px solid #ededed;
+}
+body > footer{
+	width: 100%;
+	margin: 0 auto;
+}
+p#feedback{
+	text-align: center;
+}
+
+
+
+/* For mobile */
+@media only screen and (max-width: 40em) {
+	/* mediaquery, als de maximale breedte van de pagina 480*800 dan voert hij 480px uit*/
+	body > header {
+		/* elke header direct binnen de body*/
+	    width: 100%;
+	    margin: 0 auto !important;
+	    padding: 0 0 1em;
+	}
+	header nav{
+		position: relative;
+		margin-bottom: 2em;
+	}
+	body > header p{
+		display: none;
+	}
+	.to-profile{display: none;}
+	nav {
+	    display: flex;
+	    justify-content: center;
+	}
+	nav ul{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-left: 0;
+	}
+
+	ol li{
+		 margin-bottom: 1em;
+	}
+	figure{
+		float: none;
+		left: 0;
+	}
+		figure img{
+			width: 40%;
+		}
+	main{
+		width: 80%;
+		max-width: none;
+		margin: 0 auto;
+	}
+	main article {
+    	width: 100% !important;
+    }
+    main form{
+    	width: 100%;
+    }
+    video{
+		width: 100%;
+	}
+
+	section.related {
+	    width: 80%;
+	    margin: 4em auto 0;
+	}
+	section.related article {
+    	width: 100%;
+    	margin-left: 0 !important;
+    }
+    section.related h2 {
+	    text-align: left;
+	}
+	aside{
+		width: 80%;
+		display: block;
+	}
+	#sitemap ul {
+	    list-style: none;
+	}
+	#sitemap > ul{
+		padding-left: 0;
+	}
+	#sitemap > ul > li > a{
+		font-weight: 300;
+	}
+	#sitemap > ul > li{
+		margin-bottom: 2em;
+	}
+	body > footer{
+		/* elke footer direct binnen de body*/
+		width: 100%;
+	}
+	input[type="text"], input[type="tel"], input[type="email"], input[type="date"], textarea {
+    	min-width: 93%;
+	}
+	aside{
+		display: flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	justify-content: space-between;
+	}
+	aside section{
+		width: auto;
+	}
+}
+
+/* in mediaquerys beter em of percentages gebruiken*/
+/*@media screen and (max-width : 945px)*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em){
+	body > header{
+		margin-top: 3em;
+	}
+	.to-profile{display: none;}
+	main{
+		width: 85%;
+		max-width: none;
+	}
+	main article{
+		width: 100%;
+	}
+	aside {
+    	width: 80%;
+	}
+	section.related {
+    	width: 80%;
+    }
+    section.related article{
+    	float: none;
+    	width: 100%;
+    }
+    /* PSEUDO CLASSES */
+    section.related article:nth-of-type(2), section.related article:nth-of-type(4){
+    	margin-left: 0;
+    }
+    body > footer{
+    	width: 100%;
+    }
+    figure {
+	    position: relative;
+	    top: 0em;
+	    left: 0em;
+	}
+}
+/* For ipad: */
+/*@media screen and (max-width : 768px)*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em){
+	body > header {
+	/* elke header direct binnen de body*/
+    	width: 100%;
+	}
+	body > header p{
+		display: none;
+	}
+	body > header h1{
+
+	}
+	nav{
+		justify-content: center;
+	}
+	/*header nav{
+		position: relative;
+		background: none;
+	}
+	nav {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}*/
+	header form{
+		display: none;
+	}
+	figure{
+		float: none;
+	    position: relative;
+	    top: 1em;
+    	left: 0em;
+	    margin: 0 auto;
+	}
+	video{
+		width: 100%;
+	}
+	img:nth-of-type(2){
+		width: 100%;
+	}
+	main article {
+    	width: 80%;
+    	margin: 0 auto;
+	}
+	ol{
+		text-align: center;
+	}
+	ol li {
+	    display: inline-block;
+	    line-height: 10em;
+	    font-size: .7em;
+	    margin: 0 1em 1em 0;
+	}
+	ol li a{
+		margin-bottom: 1em;
+	}
+	section.related {
+	    width: 80%;
+	    margin: 4em auto 0;
+	}
+	aside{
+		width: 80%;
+		display: flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	justify-content: space-between;
+	}
+
+	aside section:first-child, aside section:last-child{
+		margin-bottom: 4em;
+	}
+	body > footer{
+		width: 100%;
+	}
+	input[type="text"], input[type="tel"], input[type="email"], input[type="date"]{
+    	min-width: 100%;
+}
+

@@ -1,60 +1,260 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 body{
 	margin: 0;
-
-	
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #F3F1EF;
 }
 a{
 	text-decoration: none;
 	color: #fac666;
+	transition: all 0.5s ease;
 }
-/* sibling combinators zorgt ervoor dat alleen directe header-child van de body deze regels wordt toegewezen. */
+a:hover{
+	/* pseudo class*/
+	color: #000;
+}
+p{
+	font-weight: 300;
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
 body > header{
-	width: 60%;
-	margin: 0 auto;
+	/* elke header direct binnen de body*/
+	background: #ffcc00;
+	width: 100%;
+	padding-top: 1em;
+	margin: 3em 0 0;
+	padding: 2em 0;
+	clear: both;
+}
+body > header h1, body > header p{
+	margin-top: 0;
+	text-align: center;
 }
 header nav ul{
 	list-style: none;
 	padding-left: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 }
 header nav ul li{
 	display: inline;
 }
 header nav ul li a{
-	padding: 1em 1.1em;
+	padding: 1em 1.5em;
+	color: #fff;
+}
+header nav ul li a:hover{
+	color: #333;
+}
+
+header nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #000;
+	-webkit-box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.28);
+	-moz-box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.28);
+	box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.28);
+	z-index: 1;
+}
+figure{
+	float: left;
+}
+header form{
+	position: relative;
+    top: -5em;
+    width: 40%;
+    float: right;
+}
+p.to-profile{
+	position: fixed;
+    top: .4em;
+    right: 2em;
+    z-index: 2;
+    margin: 0;
+}
+
+figure img{
+	width: 50%;
+	-ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
 }
 main{
 	width: 60%;
 	margin: 0 auto;
 }
-h1{
-	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
-}
-img{
+main img{
 	width: 100%;
 }
-img:hover{
-	/* Transitie waabrbij afbeelding bij hover wordt ingezoomed.*/
-	-webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
+main article h1{
+	text-align: center;
+	font-size: 4em;
+	font-weight: 300;
+	text-shadow: 3px 3px 0px rgba(150, 150, 150, 0.34);
 }
+
+main footer{
+	background: #333;
+	color: #f5f5f5;
+	-webkit-box-shadow: 13px 10px 0px -3px rgba(0,0,0,0.11);
+	-moz-box-shadow: 13px 10px 0px -3px rgba(0,0,0,0.11);
+	box-shadow: 13px 10px 0px -3px rgba(0,0,0,0.11);
+	padding: 1em;
+    margin-left: 5%;
+    margin-bottom: 2em;
+    font-size: .8em;
+}
+main footer h4, main footer p{
+	margin: 0;
+}
+
+ol{
+	list-style: none;
+	padding-left: 0;
+}
+ol li{
+	display: inline-block;
+	line-height: 10em;
+	font-size: .7em;
+}
+ol li a{
+	background: #000;
+	border-radius: 50%;
+	width: 10em;
+	height: 10em;
+	display: inline-block;
+	text-align: center;
+}
+
+#sitemap ul {
+	list-style: none;
+}
+#sitemap > ul{
+	padding-left: 0;
+}
+#sitemap > ul > li > a{
+	font-weight: 700;
+}
+#sitemap > ul > li{
+	margin-bottom: 2em;
+}
+#credits h2{
+	font-size: 1em;
+	margin-bottom: 0;
+}
+#credits p{
+	font-size: .9em;
+	margin-top: 0;
+}
+
 section.related{
-	width: 60%;
-	margin: 4em auto 0;
-}
-section.related article{
-	margin-bottom: 5em;
-}
-aside{
 	width: 60%;
 	margin: 0 auto;
 }
+section.related h3{
+	font-size: 2em;
+}
+section.related article header p:nth-of-type(1){
+	font-size: .8em;
+	color: #676767;
+}
+section.related article header p:nth-of-type(3) {
+    font-size: .8em;
+    color: #676767;
+}
+section.related article{
+	width: 40%;
+	float: left;
+	border-bottom: 1px solid #dadada;
+	margin-bottom: 2em;
+}
+section.related article:nth-of-type(2),
+section.related article:nth-of-type(4)
+{
+	margin-left: 20%;
+}
 
+section.related section article + article{
+	/* binnen de section neemt hij alle articles die direct na een section komt zonder dat er iets tussen staat*/
+	color: #333;
+}
+section.related header h3, section.related header p{
+	margin: 0;
+}
 
+dt {
+    font-weight: 700;
+}
 
+aside{
+	width: 60%;
+	margin: 3em auto 0;
+	clear: both;
+}
+aside section{
+	width: 42%;
+}
+aside section:first-child{
+	float: left;
+}
+aside section:last-child{
+	float: right;
+}
+a[rel="bookmark"]{
+	display: block;
+}
+aside section article{
+	background: #fff;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+body > footer{
+	background: #2A2C44;
+	width: 100%;
+	clear: both;
+	color: #f5f5f5;
+	padding: 2em 0;
+}
+body > footer section{
+	width: 60%;
+	margin: 0 auto;
+}
+footer #sitemap > ul > li{
+	vertical-align: top;
+}
+footer #sitemap > ul > li{
+	display: inline-block;
+	margin-right: 1.6em;
+}
+footer #sitemap > ul > li > ul{
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#about h2, #about p{
+	font-size: .9em;
+}
+#contact h2, #contact p {
+	margin: 0;
+	font-size: .9em;
+}
+#credits{
+	clear: both;
+}
+
+#feedback{
+	text-align: center;
+	text-shadow: 6px 6px 17px rgba(150, 150, 150, 1);
+}
 /* FORMULIER */
 form{
 	margin-top: 3em;
+	margin-bottom: 3em;
 }
 fieldset{
 	border: 0;
@@ -69,7 +269,7 @@ legend{
 }
 fieldset input{
 	font-size: 1em;
-	border-radius: 5px;
+	border-radius: .5em;
 	border: 1px solid #ededed;
 }
 label span{
@@ -84,34 +284,37 @@ input[type="text"], input[type="tel"],input[type="email"],input[type="date"]{
 	padding: 1em;
 }
 input[type="submit"]{
-	-webkit-box-shadow: 10px 10px 10px -4px rgba(199,199,199,1);
-	-moz-box-shadow: 10px 10px 10px -4px rgba(199,199,199,1);
-	box-shadow: 10px 10px 10px -4px rgba(199,199,199,1);
 	font-size: 1em;
-	transform: skewX(25deg);
 	background: #fac666;;
 	border: 0;
+	border-radius: 2em;
+    padding: .5em 1em;
 }
 textarea{
 	width: 100%;
 	padding: 1em;
 	font-size: 1em;
-	border-radius: 5px;
+	border-radius: .5em;
 	border: 1px solid #ededed;
 }
 body > footer{
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 }
-p#feedback{
+#feedback{
 	text-align: center;
 }
 
+
+
 /* For mobile : like samsung grand(480 * 800): */
-@media screen and (max-width : 480px){
+/*@media screen and (max-width : 480px)*/
+@media only screen and (max-width: 40em) {
+	/* mediaquery, als de maximale breedte van de pagina 480*800 dan voert hij 480px uit*/
 	body > header {
+		/* elke header direct binnen de body*/
 	    width: 80%;
-	    margin: 0 auto;
+	    margin: 0 auto !important;
 	}
 	header nav ul li{
 		display: block;
@@ -127,40 +330,148 @@ p#feedback{
 	    background: #fac666;
 	}
 	main{
-		width: 80%;
+		width: 100%;
 	}
+	main article {
+    	width: 100% !important;
+    }
+    main form{
+    	width: 100%;
+    }
 	section.related {
 	    width: 80%;
 	    margin: 4em auto 0;
 	}
+	section.related h2 {
+	    text-align: center;
+	    border: 1px solid #5f5f5f;
+	}
 	aside{
 		width: 80%;
 	}
+	#sitemap ul {
+	    list-style: none;
+	}
+	#sitemap > ul{
+		padding-left: 0;
+	}
+	#sitemap > ul > li > a{
+		font-weight: 300;
+	}
+	#sitemap > ul > li{
+		margin-bottom: 2em;
+	}
 	body > footer{
-		width: 80%;
+		/* elke footer direct binnen de body*/
+		width: 100%;
 	}
 	input[type="text"], input[type="tel"], input[type="email"], input[type="date"], textarea {
     	min-width: 93%;
 	}
 }
 
+
+/* For iphone: */
+/*@media screen and (max-width : 320px){
+	header nav ul li {
+    	display: block;
+	}
+	header nav ul li a{
+		padding: 2em 0;
+	}
+} */
+/* in mediaquerys beter em of percentages gebruiken*/
+/*@media screen and (max-width : 945px)*/
+@media only screen and (max-width: 59.063em){
+	body > header{
+		margin-top: 3em;
+	}
+	/*header nav ul li {
+    	display: block;
+    	margin: 0 0 1.5em;
+	}*/
+	.to-profile{display: none;}
+	main{
+		width: 80%;
+	}
+	main article{
+		width: 100%;
+	}
+	aside {
+    	width: 80%;
+	}
+	section.related {
+    	width: 80%;
+    }
+    section.related article{
+    	float: none;
+    	width: 100%;
+    }
+    section.related article:nth-of-type(2), section.related article:nth-of-type(4){
+    	margin-left: 0;
+    }
+    body > footer{
+    	width: 100%;
+    }
+    figure {
+	    float: left;
+	    position: relative;
+	    top: 0em;
+	    left: 11em;
+	}
+}
 /* For ipad: */
-@media screen and (max-width : 768px){
+/*@media screen and (max-width : 768px)*/
+@media screen and (max-width : 48.000em){
+	body > header {
+	/* elke header direct binnen de body*/
+    	width: 100%;
+	}
+	body > header p{
+		display: none;
+	}
+	body > header h1{
+
+	}
+	header nav{
+		position: relative;
+		background: none;
+	}
+	header form{
+		display: none;
+	}
+	figure{
+		float: none;
+	    position: relative;
+	    top: 1em;
+    	left: 5em;
+	    margin: 0 auto;
+	}
+	img:nth-of-type(2){
+		width: 100%;
+	}
 	header nav ul li{
 		display: block;
 		width: 100%;
 		text-align: center;
-		margin-bottom: .5em;
+		margin-bottom: 0;
 	}
 	header nav ul li a{
 		display: inline-block;
 	    padding: 1em 0;
 	    width: 100%;
 	    color: #fff;
-	    background: #fac666;
+	    background: none;
+	    border-bottom: 1px solid #ffd630;
 	}
-	main{
-		width: 80%;
+	main article {
+    	width: 80%;
+	}
+	ol{
+		text-align: center;
+	}
+	ol li a{
+		margin-bottom: 1em;
 	}
 	section.related {
 	    width: 80%;
@@ -169,9 +480,17 @@ p#feedback{
 	aside{
 		width: 80%;
 	}
+	aside section{
+		width: 100%;
+	}
+	aside section:first-child, aside section:last-child{
+		float: none;
+		margin-bottom: 4em;
+	}
 	body > footer{
-		width: 80%;
+		width: 100%;
 	}
 	input[type="text"], input[type="tel"], input[type="email"], input[type="date"]{
     	min-width: 100%;
-} 
+}
+
